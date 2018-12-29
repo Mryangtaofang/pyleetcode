@@ -15,18 +15,19 @@ class Solution:
         :type l2: ListNode
         :rtype: ListNode
         """
-        if l1 is None:
+        if not l1:
             return l2
 
-        if l2 is None:
+        if not l2:
             return l1
 
         result = ListNode(0)
         cur = result
         last_num = 0
-        while l1 is not None or l2 is not None:
-            l1_num = l1.val if l1 is not None else 0
-            l2_num = l2.val if l2 is not None else 0
+        while l1 or l2:
+            l1_num = l1.val if l1 else 0
+            l2_num = l2.val if l2 else 0
+
             total = l1_num + l2_num + last_num
             if total >= 10:
                 last_num = 1
@@ -36,9 +37,9 @@ class Solution:
 
             cur.next = ListNode(total)
             cur = cur.next
-            if l1 is not None:
+            if l1:
                 l1 = l1.next
-            if l2 is not None:
+            if l2:
                 l2 = l2.next
 
         if last_num > 0:

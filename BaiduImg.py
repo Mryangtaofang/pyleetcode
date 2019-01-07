@@ -21,7 +21,7 @@ class BaiduImg:
         }
 
         # 关键词
-        self.keyword = '胸器'
+        self.keyword = '乳房'
         # 下载的图片数量
         self.img_num = 100
 

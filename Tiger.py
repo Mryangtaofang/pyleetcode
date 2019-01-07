@@ -4,6 +4,9 @@ import time
 
 
 class Tiger:
+    """
+    爬取老虎证券的新闻资讯
+    """
     def __init__(self):
         self.header = {
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',

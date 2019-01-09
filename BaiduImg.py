@@ -21,7 +21,7 @@ class BaiduImg:
         }
 
         # 关键词
-        self.keyword = '乳房'
+        self.keyword = 'luobin'
         # 下载的图片数量
         self.img_num = 100
 

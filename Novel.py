@@ -21,8 +21,8 @@ class Novel:
                           'Chrome/59.0.3071.115 Safari/537.36'
         }
 
-        self.domain_url = "https://www.xbiquge6.com"
-        self.enter_url = self.domain_url + "/76_76270/1030360.html"
+        self.domain_url = "https://www.bequge.com"
+        self.char_set = "gbk"
 
     def crawl_detail(self, crawl_url):
         """
@@ -31,7 +31,7 @@ class Novel:
         """
         try:
             list_html = requests.get(self.domain_url + crawl_url, headers=self.header)
-            soup = BeautifulSoup(list_html.content.decode("utf-8"), 'lxml')
+            soup = BeautifulSoup(list_html.content.decode(self.char_set), 'lxml')
 
             print(" " + soup.select('div.bookname>h1')[0].text)
             # 正文部分
@@ -61,4 +61,4 @@ class Novel:
 
 if __name__ == '__main__':
     novel = Novel()
-    novel.crawl('/76_76270/1057029.html', 10)
+    novel.crawl('/11_11343/2608154.html', 10)
